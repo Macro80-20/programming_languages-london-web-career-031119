@@ -33,13 +33,13 @@ languages = {
 def reformat_languages(languages)
   array={}
   languages.each do |type,data|
-    languages[type].each do |lang_name,y| 
+    languages[type].each do |lang_name,y|
       array[lang_name] = y.merge({:style => [la]})
   #binding.pry
     end
   end
   #bit dissapointed that I had to add this in manually
-  array[:javascript][:style].unshift(:oo) 
+  array[:javascript][:style].unshift(:oo)
   array
   #binding.pry
 end
